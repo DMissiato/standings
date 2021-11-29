@@ -11,8 +11,8 @@ const List = (data) =>
 
     const elems = data.map(user => {
         return `<li>
-                    <span>${user.name}</span>
                     <span>${user.points}</span>
+                    <span>${user.name}</span>
                     <span>${user.email}</span>
                 </li>`;
     }).join('');
