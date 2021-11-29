@@ -34,6 +34,7 @@ header h1
 .wrapper ul
 {
     text-align: center;
+    padding: 0;
 }
 
 .wrapper ul li
@@ -65,3 +66,12 @@ footer p a
     color: #fff;
     font-weight: 700;
 }
+
+
+@media only screen and (max-width: 600px) 
+{
+    .wrapper ul li 
+    {
+      grid-template-columns: 1fr;
+    }
+  }
