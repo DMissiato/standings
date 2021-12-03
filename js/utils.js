@@ -13,20 +13,30 @@ const render = (container, content) =>
     container.innerHTML = content;
 };
 
-function comparePoints(a, b) {
+const comparePoints = (a, b) =>
+{
     if (a.points < b.points) 
         return 1;
     else if (a.points > b.points) 
         return -1;
 
     return 0;
-  }
+}
 
+const updatePoints = (input, id = 0) =>
+{
+    const i = localData.findIndex(user => user.id == id);
+    let data = localData;
+
+    data[i].points = parseInt(input.value);
+    setLocalData(data);
+}
 
 export { 
     localData,
     setLocalData,
     API,
     render,
-    comparePoints
+    comparePoints,
+    updatePoints
 };

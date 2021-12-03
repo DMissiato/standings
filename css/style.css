@@ -39,7 +39,32 @@ html, body
 .viewContent h2
 {
     font-size: 2em;
-    margin: 6vh;
+    margin: 6vh 0;
+    margin-left: calc(3vw + 50px);
+}
+
+.viewContent h2 #currPoints
+{
+    font-size: 1em;
+    width: 8vw;
+    text-align: center;
+}
+
+.viewContent h2 #currPoints.red
+{
+    background-color: red;
+}
+
+.viewContent h2 #currPoints.green
+{
+    background-color: green;
+}
+
+.viewContent h2 #updatePoints
+{
+    margin-left: 20px;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .viewContent p
@@ -175,6 +200,12 @@ footer p a
         font-size: 24px;
     }
 
+    .viewContent h2 #currPoints
+    {
+        width: 13vw;
+        font-size: 6vw;
+    }
+
     .viewContent p
     {
         padding: 1vh 0;
@@ -187,6 +218,7 @@ footer p a
         left: 25vw;
         width: 20vw;
         padding: 15px;
+        font-size: 4vw;
     }
 
     .wrapper ul
@@ -218,6 +250,12 @@ footer p a
     .viewContent h2
     {
         margin: 15px auto;
+    }
+
+    .viewContent h2 #currPoints
+    {
+        width: 13vw;
+        font-size: 6vw;
     }
 
     .viewContent p
