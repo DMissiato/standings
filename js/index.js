@@ -1,4 +1,6 @@
 
 import { getUsers } from './list.js';
 
-document.addEventListener('DOMContentLoaded', getUsers);
+document.addEventListener('DOMContentLoaded', () => {
+    getUsers();
+});
