@@ -2,12 +2,15 @@
 import { localData, setLocalData, API, render, comparePoints } from './utils.js';
 import { View } from './view.js';
 
-const List = (data) =>
+const List = (data, addPoints = true) =>
 {
-    data.forEach(user => {
-        user.points = Math.round(Math.random() * 10);
-    });
-
+    if(addPoints)
+    {
+        data.forEach(user => {
+            user.points = Math.round(Math.random() * 10);
+        });
+    }
+    
     data.sort(comparePoints);
 
     if(!localData.length) setLocalData(data);
@@ -63,5 +66,6 @@ const getUsers = async () =>
 
 
 export{
+    List,
     getUsers
 }
