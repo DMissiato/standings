@@ -23,6 +23,21 @@ const comparePoints = (a, b) =>
     return 0;
 }
 
+const addUser = (points, username, name, email) =>
+{
+    const i = parseInt(localData[localData.length-1].id) + 1;
+
+    localData.push({
+        id: i,
+        points: points,
+        username: username,
+        name: name,
+        email: email
+    });
+
+    console.log(localData);
+}
+
 const updatePoints = (input, id = 0) =>
 {
     const i = localData.findIndex(user => user.id == id);
@@ -38,5 +53,6 @@ export {
     API,
     render,
     comparePoints,
+    addUser,
     updatePoints
 };
