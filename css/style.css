@@ -11,6 +11,68 @@ html, body
     font-family: sans-serif;
 }
 
+.view
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.9);
+    cursor: pointer;
+}
+
+.viewContent
+{
+    position: absolute;
+    height: 80vh;
+    width: 50vw;
+    top: 10vh;
+    left: 25vw;
+    background-color: #353535;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 20px;
+    z-index: 1;
+    text-align: center;
+    cursor: auto;
+}
+
+.viewContent h2
+{
+    font-size: 2em;
+    margin: 6vh;
+}
+
+.viewContent p
+{
+    padding: 3vh;
+    text-align: right;
+}
+
+.viewContent p span
+{
+    font-weight: 700;
+    float: left;
+}
+
+.viewContent hr
+{
+    margin-top: 10vh;
+}
+
+.viewContent #backUsers
+{
+    position: absolute;
+    bottom: 0;
+    left: 20vw;
+    width: 10vw;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #ccc;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 header
 {
     padding: 10px 0;
@@ -26,13 +88,17 @@ header h1
 
 .wrapper
 {
-    width: 70vw;
-    margin: 80px auto;
+    width: 80vw;
+    margin: 80px 10vw;
     text-align: justify;
 }
 
 .wrapper ul
 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
     text-align: center;
     padding: 0;
 }
@@ -40,17 +106,48 @@ header h1
 .wrapper ul li
 {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 5px;
-    border: 1px solid cadetblue;
+    width: 210px;
+    padding: 10px;
+    background-color: cadetblue;
+    border-radius: 0.7em;
+    word-break: break-word;
+    color: #fff;
+    font-size: 0.95vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper ul li .points
+{
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: gold;
+    font-weight: 700;
+}
+
+.wrapper ul li div
+{
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper ul li p
+{
+    margin: 10px 0;
 }
 
 footer
 {
-    padding: 40px 0;
+    padding: 50px 0;
     width: 100vw;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
 }
 
@@ -68,10 +165,101 @@ footer p a
 }
 
 
-@media only screen and (max-width: 600px) 
+
+@media only screen and (max-width: 880px)
 {
-    .wrapper ul li 
+    .viewContent
     {
-      grid-template-columns: 1fr;
+        width: 70vw;
+        left: 15vw;
+        font-size: 24px;
     }
-  }
+
+    .viewContent p
+    {
+        padding: 1vh 0;
+        margin: 1vh 0;
+        font-size: 3vw;
+    }
+
+    .viewContent #backUsers
+    {
+        left: 25vw;
+        width: 20vw;
+        padding: 15px;
+    }
+
+    .wrapper ul
+    {
+        gap: 15px;
+    }
+
+    .wrapper ul li
+    {
+        width: 45%;
+        font-size: 2vw;
+    }
+
+}
+
+
+@media only screen and (max-width: 450px) 
+{
+    .viewContent
+    {
+        height: 80vh;
+        width: 80vw;
+        top: 10vh;
+        left: 10vw;
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+
+    .viewContent h2
+    {
+        margin: 15px auto;
+    }
+
+    .viewContent p
+    {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .viewContent p span
+    {
+        display: block;
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .viewContent hr
+    {
+        margin-top: 3vh;
+    }
+
+    .viewContent #backUsers
+    {
+        width: 30vw;
+    }
+
+    .wrapper
+    {
+        width: 90vw;
+        margin: 60px 5vw 100px;
+    }
+
+    .wrapper ul li
+    {
+        width: 100%;
+        font-size: 0.9em;
+        padding: 20px 15px;
+    }
+
+    .wrapper ul li div
+    {
+        padding: 10px 0;
+    }
+
+}
