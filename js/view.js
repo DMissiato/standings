@@ -33,6 +33,7 @@ const View = async (id = 0) =>
 
         document.querySelector('#backUsers').addEventListener('click', () => { view.remove(); });
 
+        
         // edit points
         const input = document.querySelector('#currPoints');
 

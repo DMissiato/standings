@@ -11,6 +11,12 @@ html, body
     font-family: sans-serif;
 }
 
+hr
+{
+    margin-top: 10vh;
+    width: 100%;
+}
+
 .view
 {
     position: fixed;
@@ -79,12 +85,7 @@ html, body
     float: left;
 }
 
-.viewContent hr
-{
-    margin-top: 10vh;
-}
-
-.viewContent #backUsers
+#backUsers
 {
     position: absolute;
     bottom: 0;
@@ -98,6 +99,49 @@ html, body
     cursor: pointer;
 }
 
+.addContent
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 80vh;
+    width: 50vw;
+    top: 10vh;
+    left: 25vw;
+    background-color: #353535;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 20px;
+    z-index: 1;
+    text-align: center;
+    cursor: auto;
+}
+
+.addContent label
+{
+    margin: 3.2vh auto;
+}
+
+.addContent #addBtn
+{
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
+    width: 10vw;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #ccc;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: green;
+}
+
+.addContent #backUsers
+{
+    left: 30vw;
+}
+
 header
 {
     padding: 10px 0;
@@ -109,6 +153,20 @@ header h1
 {
     text-align: center;
     text-transform: uppercase;
+}
+
+#addUser
+{
+    margin: 50px auto;
+    text-align: center;
+    background-color:  darkcyan;
+    border: 2px solid #888;
+    width: 230px;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
 }
 
 .wrapper
@@ -190,9 +248,10 @@ footer p a
 }
 
 
-
+/* //////////////////////////////////////////////// */
 @media only screen and (max-width: 880px)
 {
+
     .viewContent
     {
         width: 70vw;
@@ -213,12 +272,36 @@ footer p a
         font-size: 3vw;
     }
 
-    .viewContent #backUsers
+    #backUsers
     {
-        left: 25vw;
+        left: 35vw;
         width: 20vw;
         padding: 15px;
-        font-size: 4vw;
+        font-size: 3vw;
+    }
+
+    .addContent
+    {
+        width: 70vw;
+        left: 15vw;
+        font-size: 24px;
+    }
+
+    .addContent hr
+    {
+        margin-top: 5vh;
+    }
+
+    .addContent #addBtn
+    {
+        width: 20vw;
+        padding: 15px;
+        font-size: 3vw;
+    }
+
+    .addContent #backUsers
+    {
+        left: 40vw;
     }
 
     .wrapper ul
@@ -235,6 +318,7 @@ footer p a
 }
 
 
+/* //////////////////////////////////////////////// */
 @media only screen and (max-width: 450px) 
 {
     .viewContent
@@ -277,9 +361,40 @@ footer p a
         margin-top: 3vh;
     }
 
-    .viewContent #backUsers
+    #backUsers
     {
         width: 30vw;
+    }
+
+    .addContent
+    {
+        height: 80vh;
+        width: 80vw;
+        top: 10vh;
+        left: 10vw;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .addContent label
+    {
+       width: 40vw;
+    }
+
+    .addContent input
+    {
+        float: right;
+    }
+
+    .addContent #addBtn
+    {
+        width: 30vw;
+        left: 7vw;
+    }
+
+    .addContent #backUsers
+    {
+        left: 43vw;
     }
 
     .wrapper
