@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/* * {
+    outline: 1px solid #f00 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  } */
+
 html, body
 {
     height: 100vh;
@@ -20,7 +26,7 @@ hr
 .view
 {
     position: fixed;
-    width: 100vw;
+    width: 100vi;
     height: 100vh;
     background-color: rgba(20, 20, 20, 0.9);
     cursor: pointer;
@@ -155,7 +161,7 @@ header h1
     text-transform: uppercase;
 }
 
-#addUser
+#addUser, #export
 {
     margin: 50px auto;
     text-align: center;
