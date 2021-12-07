@@ -15,7 +15,7 @@ const Export = () =>
 
     wb.SheetNames.push("Standings");
 
-    const ws_data = localData.map((user) => { return [user.username, user.name, user.email]; });
+    const ws_data = localData.map((user) => { return [user.points, user.username, user.name, user.email]; });
     const ws = XLSX.utils.aoa_to_sheet(ws_data);
 
     wb.Sheets["Standings"] = ws;
